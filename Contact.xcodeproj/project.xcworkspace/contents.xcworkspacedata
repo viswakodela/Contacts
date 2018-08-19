@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Contacts.xcodeproj">
+      location = "self:/Users/viswakodela/Desktop/STUDIES/iOS Development/Contacts/Contact.xcodeproj">
    </FileRef>
 </Workspace>

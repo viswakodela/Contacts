@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		BD730BDF21288489004ECC14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD730BDE21288489004ECC14 /* AppDelegate.swift */; };
-		BD730BE121288489004ECC14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD730BE021288489004ECC14 /* ViewController.swift */; };
+		BD730BE121288489004ECC14 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD730BE021288489004ECC14 /* Protocols.swift */; };
 		BD730BE421288489004ECC14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD730BE221288489004ECC14 /* Main.storyboard */; };
 		BD730BE62128848A004ECC14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD730BE52128848A004ECC14 /* Assets.xcassets */; };
 		BD730BE92128848A004ECC14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD730BE72128848A004ECC14 /* LaunchScreen.storyboard */; };
+		BD730BF221288583004ECC14 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD730BF121288583004ECC14 /* ContactsViewController.swift */; };
+		BD730BF721288690004ECC14 /* ContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD730BF621288690004ECC14 /* ContactsModel.swift */; };
+		BD730BFB21288B14004ECC14 /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD730BFA21288B14004ECC14 /* ContactsPresenter.swift */; };
+		BD730BFE21288C19004ECC14 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD730BFD21288C19004ECC14 /* ContactsInteractor.swift */; };
+		BD7C2D5D2129BEDA00B28BB9 /* Contacts Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2D5C2129BEDA00B28BB9 /* Contacts Extension.swift */; };
+		BD7C2D5F2129D46A00B28BB9 /* MeargeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7C2D5E2129D46A00B28BB9 /* MeargeSort.swift */; };
+		BD8F579E2128922A00A68E3B /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8F579D2128922A00A68E3B /* ContactsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD730BDB21288489004ECC14 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD730BDB21288489004ECC14 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD730BDE21288489004ECC14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD730BE021288489004ECC14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD730BE021288489004ECC14 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		BD730BE321288489004ECC14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD730BE52128848A004ECC14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD730BE82128848A004ECC14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD730BEA2128848A004ECC14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD730BF121288583004ECC14 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		BD730BF621288690004ECC14 /* ContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModel.swift; sourceTree = "<group>"; };
+		BD730BFA21288B14004ECC14 /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
+		BD730BFD21288C19004ECC14 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
+		BD7C2D5C2129BEDA00B28BB9 /* Contacts Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contacts Extension.swift"; sourceTree = "<group>"; };
+		BD7C2D5E2129D46A00B28BB9 /* MeargeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeargeSort.swift; sourceTree = "<group>"; };
+		BD8F579D2128922A00A68E3B /* ContactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +60,7 @@
 		BD730BDC21288489004ECC14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD730BDB21288489004ECC14 /* Contacts.app */,
+				BD730BDB21288489004ECC14 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,22 +68,77 @@
 		BD730BDD21288489004ECC14 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				BD730BF8212887F6004ECC14 /* Protocols */,
+				BD8F579C2128921100A68E3B /* Router */,
+				BD730BF521288680004ECC14 /* Entity */,
+				BD730BFC21288BFD004ECC14 /* Intereactor */,
+				BD730BF921288AF7004ECC14 /* Presenter */,
+				BD730BF021288555004ECC14 /* View */,
 				BD730BDE21288489004ECC14 /* AppDelegate.swift */,
-				BD730BE021288489004ECC14 /* ViewController.swift */,
 				BD730BE221288489004ECC14 /* Main.storyboard */,
 				BD730BE52128848A004ECC14 /* Assets.xcassets */,
 				BD730BE72128848A004ECC14 /* LaunchScreen.storyboard */,
 				BD730BEA2128848A004ECC14 /* Info.plist */,
+				BD7C2D5E2129D46A00B28BB9 /* MeargeSort.swift */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		BD730BF021288555004ECC14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD730BF121288583004ECC14 /* ContactsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD730BF521288680004ECC14 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BD730BF621288690004ECC14 /* ContactsModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		BD730BF8212887F6004ECC14 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BD730BE021288489004ECC14 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BD730BF921288AF7004ECC14 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD730BFA21288B14004ECC14 /* ContactsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD730BFC21288BFD004ECC14 /* Intereactor */ = {
+			isa = PBXGroup;
+			children = (
+				BD730BFD21288C19004ECC14 /* ContactsInteractor.swift */,
+				BD7C2D5C2129BEDA00B28BB9 /* Contacts Extension.swift */,
+			);
+			path = Intereactor;
+			sourceTree = "<group>";
+		};
+		BD8F579C2128921100A68E3B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BD8F579D2128922A00A68E3B /* ContactsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD730BDA21288489004ECC14 /* Contacts */ = {
+		BD730BDA21288489004ECC14 /* Contact */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD730BED2128848A004ECC14 /* Build configuration list for PBXNativeTarget "Contacts" */;
+			buildConfigurationList = BD730BED2128848A004ECC14 /* Build configuration list for PBXNativeTarget "Contact" */;
 			buildPhases = (
 				BD730BD721288489004ECC14 /* Sources */,
 				BD730BD821288489004ECC14 /* Frameworks */,
@@ -79,9 +148,9 @@
 			);
 			dependencies = (
 			);
-			name = Contacts;
+			name = Contact;
 			productName = Contacts;
-			productReference = BD730BDB21288489004ECC14 /* Contacts.app */;
+			productReference = BD730BDB21288489004ECC14 /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BD730BD621288489004ECC14 /* Build configuration list for PBXProject "Contacts" */;
+			buildConfigurationList = BD730BD621288489004ECC14 /* Build configuration list for PBXProject "Contact" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +181,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD730BDA21288489004ECC14 /* Contacts */,
+				BD730BDA21288489004ECC14 /* Contact */,
 			);
 		};
 /* End PBXProject section */
@@ -135,8 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD730BE121288489004ECC14 /* ViewController.swift in Sources */,
+				BD730BFB21288B14004ECC14 /* ContactsPresenter.swift in Sources */,
+				BD730BE121288489004ECC14 /* Protocols.swift in Sources */,
+				BD7C2D5F2129D46A00B28BB9 /* MeargeSort.swift in Sources */,
+				BD8F579E2128922A00A68E3B /* ContactsRouter.swift in Sources */,
 				BD730BDF21288489004ECC14 /* AppDelegate.swift in Sources */,
+				BD730BF721288690004ECC14 /* ContactsModel.swift in Sources */,
+				BD7C2D5D2129BEDA00B28BB9 /* Contacts Extension.swift in Sources */,
+				BD730BF221288583004ECC14 /* ContactsViewController.swift in Sources */,
+				BD730BFE21288C19004ECC14 /* ContactsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.viswakodela.Contacts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tests;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.viswakodela.Contacts;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tests;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,7 +391,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD730BD621288489004ECC14 /* Build configuration list for PBXProject "Contacts" */ = {
+		BD730BD621288489004ECC14 /* Build configuration list for PBXProject "Contact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD730BEB2128848A004ECC14 /* Debug */,
@@ -324,7 +400,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD730BED2128848A004ECC14 /* Build configuration list for PBXNativeTarget "Contacts" */ = {
+		BD730BED2128848A004ECC14 /* Build configuration list for PBXNativeTarget "Contact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD730BEE2128848A004ECC14 /* Debug */,
