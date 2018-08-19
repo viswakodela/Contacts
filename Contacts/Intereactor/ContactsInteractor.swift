@@ -13,7 +13,6 @@ class ContactsInteractor: PresentorToInterectorProtocol {
     
     var presenter: InterectorToPresenterProtocol?
     
-    var filtedContacts = [Contact]()
     
     func fetchContacts() {
         
@@ -25,7 +24,6 @@ class ContactsInteractor: PresentorToInterectorProtocol {
             if granted {
                 print("Access Granted")
                 ContactsExtension.shared.contactsFetch(contactsStore: contactsStore, completion: { (contact) in
-//                    print(contact)
                     self.presenter?.contactFetched(contact: contact)
                 })
             }else {

@@ -12,31 +12,32 @@ import Contacts
 class ContactsExtension {
     
     var contacts = [Contact]()
-    var filtedContacts = [Contact]()
     
     static let shared = ContactsExtension()
     
     func contactsFetch(contactsStore: CNContactStore, completion: @escaping ([Contact]) -> ()) {
         
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataKey]
-        let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+        let fetchRequest = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+        fetchRequest.sortOrder = CNContactSortOrder.givenName
         
         DispatchQueue.main.async {
             do {
-                try contactsStore.enumerateContacts(with: request, usingBlock: { (contact, unsafePointer) in
-                    //                      print(contact.givenName + " " + contact.familyName)
+                try contactsStore.enumerateContacts(with: fetchRequest, usingBlock: { (contact, unsafePointer) in
+//                                          print(contact.givenName + " " + contact.familyName)
                     if let phoneNumber = contact.phoneNumbers.first?.value.stringValue{
+                        
                         DispatchQueue.main.async {
                             
                             self.contacts.append(Contact(firstName: contact.givenName, lastName: contact.familyName, phoneNumber: phoneNumber))
                             
-                            let sortedcontacts = self.contacts.sorted(by: { (c1, c2) -> Bool in
-                                c1.firstName < c2.firstName && c1.lastName < c2.lastName
-                            })
-                            self.contacts = sortedcontacts
+                                completion(self.contacts)
                             
-                            self.filtedContacts = self.contacts
-                            completion(self.filtedContacts)
+                            
+//                            print(self.contacts)
+//                            let sortedcontacts = self.contacts.sorted(by: { (c1, c2) -> Bool in
+//                                c1.firstName < c2.firstName && c1.lastName < c2.lastName
+//                            })
                         }
                     }
                 })

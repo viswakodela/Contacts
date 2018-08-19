@@ -23,6 +23,12 @@ class ContactsViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         presenter?.updateView()
         
+        setupSearchBarandTableView()
+    }
+    
+    
+    
+    fileprivate func setupSearchBarandTableView() {
         navigationItem.title = "Contacts"
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
@@ -31,8 +37,10 @@ class ContactsViewController: UITableViewController, UISearchBarDelegate {
         tableView.keyboardDismissMode = .onDrag
         navigationItem.hidesSearchBarWhenScrolling = false
         searchBarController.dimsBackgroundDuringPresentation = false
-        
     }
+    
+    
+    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty{
@@ -45,10 +53,12 @@ class ContactsViewController: UITableViewController, UISearchBarDelegate {
         }
         tableView.reloadData()
     }
+}
     
+
+extension ContactsViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return filteredContacts.count
     }
     
@@ -57,17 +67,18 @@ class ContactsViewController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         cell.textLabel?.numberOfLines = -1
         
-            let contacts = filteredContacts[indexPath.row]
+        let contacts = filteredContacts[indexPath.row]
         
-            cell.textLabel?.text = contacts.firstName
+        cell.textLabel?.text = contacts.firstName
         
-            let attributedtext = NSMutableAttributedString(string: contacts.firstName, attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 18)])
-            attributedtext.append(NSAttributedString(string: " " + contacts.lastName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 18)]))
-            attributedtext.append(NSAttributedString(string: "\n"+contacts.phoneNumber, attributes: [NSAttributedStringKey.foregroundColor : UIColor.gray]))
-            cell.textLabel?.attributedText = attributedtext
-            return cell
-    }
+        let attributedtext = NSMutableAttributedString(string: contacts.firstName, attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 18)])
+        attributedtext.append(NSAttributedString(string: " " + contacts.lastName, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 18)]))
+        attributedtext.append(NSAttributedString(string: "\n"+contacts.phoneNumber, attributes: [NSAttributedStringKey.foregroundColor : UIColor.gray]))
+        cell.textLabel?.attributedText = attributedtext
+        return cell
+    } 
 }
+
 
 extension ContactsViewController: PresenterToViewProtocol {
     func showError() {

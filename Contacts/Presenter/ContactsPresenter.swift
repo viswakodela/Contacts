@@ -10,8 +10,6 @@ import UIKit
 
 class ContactsPresenter: ViewToPresenterProtocol {
     
-//    var contact: [Contact]?
-    
     var view: PresenterToViewProtocol?
     var interector: PresentorToInterectorProtocol?
     var router: PresenterToRouterProtocol?
@@ -24,6 +22,7 @@ class ContactsPresenter: ViewToPresenterProtocol {
 extension ContactsPresenter: InterectorToPresenterProtocol {
     
     func contactFetched(contact: [Contact]) {
+//        print(contact.count)
         view?.showContacts(contact: contact)
     }
     
